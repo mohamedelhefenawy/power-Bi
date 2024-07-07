@@ -39,6 +39,10 @@
 - `Chicken`
 - `Capocollo`
 
+## For Extracting the ingredients we use 
+- pandas
+- collector
+
 ### Sales by Month
 
 - `July: Highest sales`
