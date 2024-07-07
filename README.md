@@ -46,22 +46,22 @@
 import pandas as pd
 from collections import Counter
 ```
-### Split and Flatten the Ingredients List
+### 1- Split and Flatten the Ingredients List
 Split each ingredient string by commas and flatten the list.
 ```bash
 all_ingredients = [ingredient.strip() for sublist in df['pizza_ingredients'].str.split(',') for ingredient in sublist]
 ```
-### Count Ingredient Frequencies
+### 2- Count Ingredient Frequencies
 Use Counter from the collections module to count the occurrences of each ingredient.
 ```bash
 ingredient_counts = Counter(all_ingredients)
 ```
-### Create a DataFrame of Counts
+### 3- Create a DataFrame of Counts
 Convert the counts to a DataFrame.
 ```bash
 df=  pd.DataFrame(count_ingredient.items(),columns=['ingredient','count'])
 ```
-### Sort the Counts in Descending Order
+### 4- Sort the Counts in Descending Order
 Sort the DataFrame by the count column in descending order.
 ```bash
 df = df.sort_values(['count'],ascending=False).reset_index(drop=True)
