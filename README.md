@@ -49,12 +49,12 @@ from collections import Counter
 ### 1- Split and Flatten the Ingredients List
 Split each ingredient string by commas and flatten the list.
 ```bash
-all_ingredients = [ingredient.strip() for sublist in df['pizza_ingredients'].str.split(',') for ingredient in sublist]
+ingredient = [x.strip() for y in data['pizza_ingredients'].str.split(',') for x in y]
 ```
 ### 2- Count Ingredient Frequencies
 Use Counter from the collections module to count the occurrences of each ingredient.
 ```bash
-ingredient_counts = Counter(all_ingredients)
+count_ingredient = Counter(ingredient)
 ```
 ### 3- Create a DataFrame of Counts
 Convert the counts to a DataFrame.
